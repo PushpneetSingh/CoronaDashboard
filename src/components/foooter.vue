@@ -9,7 +9,8 @@
       tile
     >
       <v-card-text class="py-2 white--text text-center">
-	   <strong> Made with love by Pushpneet Singh</strong> All rights reserved.
+	   <strong> Made with love by Pushpneet Singh </strong>
+	   <a href="https://api.covid19india.org/"> Api Data </a>
       </v-card-text>
     </v-card>
   </v-footer>

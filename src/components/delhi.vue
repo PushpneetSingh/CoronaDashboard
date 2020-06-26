@@ -53,11 +53,17 @@
 				<v-layout class="mx-auto">
 					<v-flex md6 xs12>
 						<v-card class="pa-4" flat>
+							<v-card-title class="elevation-3">
+							<span class="title mx-auto">Active</span>
+							</v-card-title>
 							<lc />
 						</v-card>
 					</v-flex>
 					<v-flex md6 xs12 >
 						<v-card class="pa-4" flat>
+							<v-card-title class="elevation-3">
+							<span class="title mx-auto">Deaths</span>
+							</v-card-title>
 							<dc />	
 						</v-card>
 					</v-flex>					

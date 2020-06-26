@@ -49,10 +49,7 @@
 			}
           }
 		}
-	},
-	beforeMount () {
-    this.getsysdata()
-	},
+	}
 	
 }
 </script>
