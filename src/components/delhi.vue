@@ -54,7 +54,7 @@
 					<v-flex md6 xs12>
 						<v-card class="pa-4" flat>
 							<v-card-title class="elevation-3">
-							<span class="title mx-auto">Active</span>
+							<span class="title mx-auto">New Cases Per Day</span>
 							</v-card-title>
 							<lc />
 						</v-card>
@@ -62,11 +62,21 @@
 					<v-flex md6 xs12 >
 						<v-card class="pa-4" flat>
 							<v-card-title class="elevation-3">
-							<span class="title mx-auto">Deaths</span>
+							<span class="title mx-auto">Deaths per day</span>
 							</v-card-title>
 							<dc />	
 						</v-card>
 					</v-flex>					
+				</v-layout>
+				<v-layout class="mx-auto">
+					<v-flex md12 xs12>
+						<v-card class="pa-4" flat>
+							<v-card-title class="elevation-3">
+							<span class="title mx-auto">Recovery Per Day</span>
+							</v-card-title>
+							<rc />
+						</v-card>
+					</v-flex>								
 				</v-layout>
 			</v-card>
 	</div>
@@ -74,6 +84,7 @@
 <script>
 import lc from '@/components/chart/delhi/active.vue'
 import dc from '@/components/chart/delhi/death.vue'
+import rc from '@/components/chart/delhi/recovery.vue'
 export default {
 	data () {
 		return {
@@ -85,6 +96,8 @@ export default {
 			dayaxis: [],
 			ddxaxis: [],
 			ddyaxis: [],
+			rdxaxis: [],
+			rdyaxis: [],
 		}
 	},
 	beforeMount () {
@@ -117,7 +130,7 @@ export default {
 		}
 		});
 
-		for (let i=1;i<dt.states_daily.length;i=i+3){
+		for (let i=2;i<dt.states_daily.length;i=i+3){
 			this.ddyaxis.push(dt.states_daily[i].dl)
 			this.ddxaxis.push(dt.states_daily[i].date)
 		}
@@ -130,11 +143,25 @@ export default {
 		}
 		});
 
+		for (let i=1;i<dt.states_daily.length;i=i+3){
+			this.rdyaxis.push(dt.states_daily[i].dl)
+			this.rdxaxis.push(dt.states_daily[i].date)
+		}
+		ApexCharts.exec('realtimedr', 'updateSeries', [{
+			data: this.rdyaxis
+			}], true);
+		ApexCharts.exec('realtimedr', 'updateOptions', {
+		xaxis: {
+			categories: this.rdxaxis
+		}
+		});
+
 	}	
 	},
 	components:{
 		lc,
-		dc
+		dc,
+		rc
 	},
 }
 </script>

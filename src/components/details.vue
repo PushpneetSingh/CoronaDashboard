@@ -64,10 +64,12 @@
 				<span class="body-2">(Image : MyGov.in/covid19)</span>
 			</v-card>
 			<v-card class="pa-2 ma-4 mx-auto" align="center" color="blue lighten-5">
+				</v-card>
+			<v-card class="pa-2 ma-4 mx-auto" align="center" color="blue lighten-5">
 				<v-card-title>
 				<span class="title mx-auto">Links</span>
 				</v-card-title>
-				<v-container class="mx-auto" >
+				<v-container class="mx-auto" nax-height:"500px" >
 					<v-col >
 						<a href="https://www.worldometers.info/coronavirus/" >
 							<v-img
@@ -112,6 +114,7 @@
 	</div>
 </template>
 <script>
+import { VueDatamaps } from 'vue-datamaps'
 export default {
 	data () {
 		return {
@@ -121,6 +124,9 @@ export default {
 			lastupdate:[],
 		}
 	},
+	components: {
+        VueDatamaps,
+    },
 	beforeMount () {
     this.getdata()
 	
