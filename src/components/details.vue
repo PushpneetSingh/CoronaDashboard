@@ -107,7 +107,7 @@
 											color="indigo"
 											text-color="white"
 										>
-											Fever
+											Aches And Pains
 										</v-chip>
 									
 										<v-chip
@@ -115,7 +115,7 @@
 											color="indigo"
 											text-color="white"
 										>
-											Shortness of breath
+											Nasal Congestion
 										</v-chip>
 									
 										<v-chip
@@ -123,16 +123,26 @@
 											color="indigo"
 											text-color="white"
 										>
-											Dry cough
+											Runny Nose
+										</v-chip>
+
+										<v-chip
+											class="ma-2"
+											color="indigo"
+											text-color="white"
+										>
+											Sore Throat
+										</v-chip>
+
+										<v-chip
+											class="ma-2"
+											color="indigo"
+											text-color="white"
+										>
+											Diarrhoea
 										</v-chip>
 									</v-col>
 									</v-row>
-									<v-list-item-title >Aches And Pains.</v-list-item-title>
-									<v-list-item-title >Nasal Congestion.</v-list-item-title>
-									<v-list-item-title >Runny</v-list-item-title>
-									<v-list-item-title >Nose.</v-list-item-title>
-									<v-list-item-title >Sore Throat.</v-list-item-title>
-									<v-list-item-title >Diarrhoea.</v-list-item-title>
 								</v-list-item-content>
 								</v-list-item>
 							
