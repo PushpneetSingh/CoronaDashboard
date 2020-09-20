@@ -27,7 +27,10 @@
 			  
               zoom: {
                 enabled: true
-              }
+              },
+			   toolbar: {
+        		show: true
+			  }
             },
 			noData: {
 				text: 'Loading...'
