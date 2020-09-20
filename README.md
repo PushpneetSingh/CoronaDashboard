@@ -1,4 +1,5 @@
-# dashboard
+# CoronaDashboard 
+A tracker depicting the current situation of India amid Pandemic in a structured way with some visualization.
 
 ## Project setup
 ```
@@ -14,11 +15,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
